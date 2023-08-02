@@ -1,0 +1,17 @@
+{
+  "name": "zoodb-example-peopledb-peobledbjs",
+  "packageManager": "yarn@3.3.0",
+  "type": "module",
+  "version": "0.1.0",
+  "main": "peopledb.js",
+  "author": "Philippe Faist",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "debug": "^4.3.4",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "@phfaist/zoodb": "*"
+  }
+}

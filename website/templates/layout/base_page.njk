@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{{ page.title }}</title>
+<link rel="stylesheet" href="~/website/stylesheets/main.scss" />
+{% include 'useMathjaxScript.njk' %}
+{{ include_extra_head_content | safe }}
+</head>
+<body>
+
+{% include 'header.njk' %}
+
+<main>{{ content | safe }}</main>
+
+{% include 'footer.njk' %}
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

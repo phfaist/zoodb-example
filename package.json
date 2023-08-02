@@ -1,0 +1,15 @@
+{
+  "name": "zoodb-example-peopledb",
+  "packageManager": "yarn@3.3.0",
+  "private": true,
+  "workspaces": [
+    "peopledbjs",
+    "website"
+  ],
+  "@parcel/resolver-default": {
+    "packageExports": true
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
