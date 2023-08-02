@@ -12,6 +12,7 @@
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
   },
   "peerDependencies": {
+    "@parcel/core": "*",
     "@phfaist/zoodb": "*",
     "tippy.js": "*"
   },

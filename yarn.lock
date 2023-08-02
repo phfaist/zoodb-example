@@ -1290,6 +1290,7 @@ __metadata:
     sirv-cli: ^2.0.2
     zoodb-example-peopledb-peobledbjs: ">=0.0.1"
   peerDependencies:
+    "@parcel/core": "*"
     "@phfaist/zoodb": "*"
     tippy.js: "*"
   languageName: unknown
@@ -1297,7 +1298,7 @@ __metadata:
 
 "@phfaist/zoodb@https://github.com/phfaist/zoodb#main":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=d0a0cd977aebf89993ca5151173d22e703353bdd"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=d8d4a6bfe0fdfe12ff0833c817170dcae1788440"
   dependencies:
     "@apidevtools/json-schema-ref-parser": ^9.0.9
     base32-encode: ^2.0.0
@@ -1318,7 +1319,7 @@ __metadata:
     stream-parser: ^0.3.1
     tippy.js: ^6.3.7
     url: ^0.11.0
-  checksum: 5a2ac02e87a241011ceed09daef4fde065ac88edb2daccfe5afd6facb86952e7813eb0f91c6cfeaa6b8a40327b46ef1064b5370fbd3d88723db295974fe1d766
+  checksum: ba3860776a7f61eb6da97efd9739b488ffd43fd131e81155f1d5b17e8b72f892c028651d9dda661dd9ed5a8d2cb0ed676a604adee8503314fa3709a1625469c8
   languageName: node
   linkType: hard
 
