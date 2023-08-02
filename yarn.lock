@@ -1272,30 +1272,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phfaist/zoodb-example-peopledb-website@workspace:website":
-  version: 0.0.0-use.local
-  resolution: "@phfaist/zoodb-example-peopledb-website@workspace:website"
-  dependencies:
-    "@11ty/eleventy": ^2.0.0
-    "@kitschpatrol/eleventy-plugin-parcel": ^1.0.0
-    "@mischnic/parcel-resolver-root": ^0.4.2
-    "@parcel/config-default": ^2.9.3
-    "@parcel/core": ^2.9.3
-    "@parcel/transformer-raw": ^2.9.3
-    "@parcel/transformer-sass": 2.9.3
-    "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main"
-    parcel: ^2.9.3
-    parcel-optimizer-nohtmlsuffix: "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix"
-    parcel-reporter-static-files-copy: ^1.5.2
-    sirv-cli: ^2.0.2
-    zoodb-example-peopledb-peobledbjs: ">=0.0.1"
-  peerDependencies:
-    "@parcel/core": "*"
-    "@phfaist/zoodb": "*"
-    tippy.js: "*"
-  languageName: unknown
-  linkType: soft
-
 "@phfaist/zoodb@https://github.com/phfaist/zoodb#main":
   version: 0.1.1
   resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=d8d4a6bfe0fdfe12ff0833c817170dcae1788440"
@@ -5329,6 +5305,28 @@ __metadata:
   dependencies:
     debug: ^4.3.4
     lodash: ^4.17.21
+  peerDependencies:
+    "@phfaist/zoodb": "*"
+  languageName: unknown
+  linkType: soft
+
+"zoodb-example-peopledb-website@workspace:website":
+  version: 0.0.0-use.local
+  resolution: "zoodb-example-peopledb-website@workspace:website"
+  dependencies:
+    "@11ty/eleventy": ^2.0.0
+    "@kitschpatrol/eleventy-plugin-parcel": ^1.0.0
+    "@mischnic/parcel-resolver-root": ^0.4.2
+    "@parcel/config-default": ^2.9.3
+    "@parcel/core": ^2.9.3
+    "@parcel/transformer-raw": ^2.9.3
+    "@parcel/transformer-sass": 2.9.3
+    "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main"
+    parcel: ^2.9.3
+    parcel-optimizer-nohtmlsuffix: "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix"
+    parcel-reporter-static-files-copy: ^1.5.2
+    sirv-cli: ^2.0.2
+    zoodb-example-peopledb-peobledbjs: ">=0.0.1"
   peerDependencies:
     "@phfaist/zoodb": "*"
   languageName: unknown
