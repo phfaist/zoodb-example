@@ -23,8 +23,8 @@
     "sirv-cli": "^2.0.2"
   },
   "scripts": {
-    "dev": "DEBUG=\"zoodb*,Eleventy:Benchmark,*Error*\" eleventy --serve",
-    "build": "rm -rf _site .parcel-cache && DEBUG=\"zoodb*,Eleventy:Benchmark,*Error*\" eleventy",
+    "dev": "DEBUG=\"zoodb*,Eleventy:Benchmark,Eleventy:Logger,*Error*\" eleventy --serve",
+    "build": "rm -rf _site .parcel-cache && DEBUG=\"zoodb*,Eleventy:Benchmark,Eleventy:Logger,*Error*\" eleventy",
     "serve": "sirv _site/",
     "eslint": "eslint javascripts/**/*.js"
   },
