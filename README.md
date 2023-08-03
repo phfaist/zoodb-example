@@ -26,3 +26,6 @@ to generate the required output.
 A simple example static website, generated with the given data, is
 in `website/`.  See the [README](website/README.md) file there.  The website
 is powered by [11ty](https://11ty.dev/) and [parcel](https://parceljs.org/).
+
+See also [the documentation for the ZooDB
+package](https://zoodb.readthedocs.org/).
