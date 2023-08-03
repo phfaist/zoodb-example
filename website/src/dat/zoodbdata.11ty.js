@@ -1,16 +1,16 @@
 //
-// Dump all the PeopleDb data, including information about cross-references,
+// Dump all the ZooDb data, including information about cross-references,
 // citations, and graphics resources, in one big JSON file.
 //
 
 const data = {
     layout: null,
-    permalink: 'dat/peopledbdata.json',
+    permalink: 'dat/zoodbdata.json',
 };
 
 const render = async (data) => {
 
-    const zoodb = data.peopledb;
+    const zoodb = data.zoodb;
 
     const db = zoodb.raw_data_db_dump();
 

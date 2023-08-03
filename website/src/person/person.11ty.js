@@ -4,7 +4,7 @@ const data = async () => {
 
     return {
         pagination: {
-            data: 'peopledb.objects.person',
+            data: 'zoodb.objects.person',
             size: 1,
             resolve: 'values',
             addAllPagesToCollections: true,
@@ -14,7 +14,7 @@ const data = async () => {
         tags: ['allPages', 'person'],
         eleventyComputed: {
             permalink: (data) =>
-                data.peopledb.zoo_object_permalink('person', data.person.person_id) + '.html',
+                data.zoodb.zoo_object_permalink('person', data.person.person_id) + '.html',
             title: (data) => zooflm.render_text_standalone(data.person.name),
             person_name: (data) => zooflm.render_text_standalone(data.person.name),
             date: (data) => {
@@ -29,9 +29,9 @@ const data = async () => {
 
 const render = async (data) => {
 
-    const { person, peopledb } = data;
+    const { person, zoodb } = data;
 
-    const zoo_flm_environment = peopledb.zoo_flm_environment;
+    const zoo_flm_environment = zoodb.zoo_flm_environment;
 
     const zooflm = await import('@phfaist/zoodb/zooflm');
     const { sqzhtml } = await import('@phfaist/zoodb/util/sqzhtml');

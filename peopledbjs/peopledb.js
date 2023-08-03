@@ -41,7 +41,7 @@ import { permalinks } from './permalinks.js';
 // -----------------------------------------------------------------------------
 
 
-export class PeopleDb extends StandardZooDb
+export class MyZooDb extends StandardZooDb
 {
     constructor(config)
     {
@@ -121,7 +121,7 @@ export class PeopleDb extends StandardZooDb
 // -----------------------------------------------------------------------------
 
 
-export class PeopleDbYamlDataLoader extends StandardZooDbYamlDataLoader
+export class MyZooDbYamlDataLoader extends StandardZooDbYamlDataLoader
 {
     constructor()
     {
@@ -153,12 +153,12 @@ export class PeopleDbYamlDataLoader extends StandardZooDbYamlDataLoader
 
 // -----------------------------------------------------------------------------
 
-export async function load_people_db()
+export async function load_zoodb()
 {
-    const people_db = new PeopleDb();
-    people_db.install_zoo_loader(new PeopleDbYamlDataLoader({ }));
+    const zoodb = new MyZooDb();
+    zoodb.install_zoo_loader(new MyZooDbYamlDataLoader({ }));
 
-    await people_db.load();
+    await zoodb.load();
 
-    return people_db;
+    return zoodb;
 }

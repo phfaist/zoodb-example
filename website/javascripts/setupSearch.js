@@ -29,6 +29,7 @@ async function setupSearch()
         resolve_href,
         context_length: 200,
         getMathJax: () => window.MathJax,
+        tippyAppearanceTheme: 'light',
     });
     
 }

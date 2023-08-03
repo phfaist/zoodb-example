@@ -8,7 +8,7 @@ const data = {
         // https://github.com/11ty/eleventy/issues/2199#issuecomment-1027362151
         date: (data) => {
             data.page.date = new Date(
-                data.peopledb.zoo_gitlastmodified_processor.get_latest_modification_date()
+                data.zoodb.zoo_gitlastmodified_processor.get_latest_modification_date()
             );
             return data.page.date;
         }
@@ -16,19 +16,36 @@ const data = {
     }
 };
 
-const render = function(data) {
+const render = async function (data)
+{
+    const eleventy = this;
+    const zoodb = data.zoodb;
+
+    const { render_html_standalone } = await import('@phfaist/zoodb/zooflm');
+
     let content = `
 <p>List of people:</p>`;
 
     content += `
 <ul>`;
 
-    const persons_pages = [... data.collections.person ];
-    persons_pages.sort( (a,b) => a.data.person_name.localeCompare(b.data.person_name) )
+    const person_id_list = [ ...Object.keys(zoodb.objects.person) ];
+    person_id_list.sort();
 
-    for (const person_page of persons_pages) {
+    for (const person_id of person_id_list) {
+        // If we'd like to render other properties of `person`, especial FLM
+        // content that is not marked as standalone-mode compatible, we should
+        // use `zooflm.make_and_render_document` with a render callback.
+
+        const person = zoodb.objects.person[person_id];
+        const personHrefUrl = eleventy.hrefUrl(
+            zoodb.zoo_object_permalink('person', person_id)
+        );
+        const personName = render_html_standalone(zoodb.objects.person[person_id].name);
+
         content += `
-<li><a href="${ this.hrefUrl(person_page.url) }">${ person_page.data.title }</a></li>`;
+<li><a href="${ personHrefUrl }">${ personName }</a></li>
+`;
     }
 
     content += `

@@ -51,5 +51,7 @@ footer {
 // More styles
 //
 
-// styling the search widget popup
+// styling the search widget popup -- you can replace this by your own custom
+// stylesheet if you want to provide a fancier style
 @import '~/node_modules/tippy.js/dist/tippy.css';
+@import '~/node_modules/tippy.js/themes/light.css';
