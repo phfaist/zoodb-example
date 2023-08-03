@@ -24,8 +24,11 @@ database, then you can use this code to load the database in memory and use it
 to generate the required output.
 
 A simple example static website, generated with the given data, is
-in `website/`.  See the [README](website/README.md) file there.  The website
+in `website/`.  The website
 is powered by [11ty](https://11ty.dev/) and [parcel](https://parceljs.org/).
+
+**To build the website:** refer to the [README](website/README.md) file
+in the folder `website/` folder. 
 
 See also [the documentation for the ZooDB
 package](https://zoodb.readthedocs.org/).
