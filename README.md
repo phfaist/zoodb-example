@@ -1,4 +1,4 @@
-# Example ZooDb usage
+# Example Zoo Using ZooDb
 
 In this repository we have a very simple illustrative example of a usage of our
 [ZooDb framework](https://github.com/phfaist/zoodb)
