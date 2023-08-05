@@ -12,23 +12,9 @@ const render = async (data) => {
 
     const zoodb = data.zoodb;
 
-    const db = zoodb.raw_data_db_dump();
+    let db_data = await zoodb.data_dump();
 
-    const refs_data = {
-        refs:
-            zoodb.zoo_flm_environment.ref_resolver.dump_database(),
-        citations:
-            zoodb.zoo_flm_environment.citations_provider.dump_database(),
-        graphics_collection:
-            zoodb.zoo_flm_environment.graphics_collection.dump_database(),
-    };
-
-    const dump = {
-        refs_data,
-        db,
-    };
-
-    return JSON.stringify(dump);
+    return JSON.stringify(db_data);
 
 };
 
