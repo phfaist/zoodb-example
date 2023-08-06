@@ -79,6 +79,14 @@ export class MyZooDb extends StandardZooDb
                     rename_figure_template: null,
                     figure_filename_extensions: null,
                     graphics_resources_fs_data_dir: null,
+                    
+                    // enable srcset= attributes on <img> tags.  This requires
+                    // postprocessing the site files with ParcelJS, as we indeed
+                    // do in this example setup.
+                    graphics_use_srcset_parceljs: {
+                        enabled: true,
+                        image_max_zoom_factor: 2,
+                    }
                 },
 
             },
