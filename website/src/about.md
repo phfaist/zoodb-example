@@ -15,8 +15,9 @@ You can edit the data files, or add additional data files, in the
 `zoodb/example/data` folder.  Go ahead and play around :)
 
 This example website is powered by the wonderful [eleventy static website
-generator](https://11ty.dev/).  Content template files can be written in HTML,
-JavaScript, Markdown, and more.  Try it out!
+generator](https://11ty.dev/) and [parceljs bundler](https://parceljs.org/).
+Content template files can be written in HTML, JavaScript, Markdown, and more.
+Try it out!
 
 
 # More information

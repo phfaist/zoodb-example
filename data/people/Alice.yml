@@ -6,9 +6,11 @@ name: 'Alice Aaliz'
 biography: |
   Alice's biography goes here.
 
-  Alice is happy:
+  Alice is happy, as seen in \ref{figure:AliceIsHappy}:
   \begin{figure}
-  \includegraphics{images/Smiley}
+    \includegraphics{images/Smiley}
+    %% \caption{Alice is happy!}
+    \label{figure:AliceIsHappy}
   \end{figure}
 
 relations:
