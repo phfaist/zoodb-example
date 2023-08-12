@@ -35,7 +35,7 @@ properties:
   person_id:
     type: string
     pattern: '^[a-z0-9_.-]+$'
-    _single_line_string: True
+    _single_line_string: true
     _description: >-
       An internal identifier for the person.  It must be unique across all
       persons.
@@ -43,7 +43,7 @@ properties:
   name:
     type: string
     _flm: standalone
-    _single_line_string: True
+    _single_line_string: true
     _description: >-
       The name of the code.  It is listed in multiple places, so don't make it
       too long.
@@ -70,12 +70,15 @@ properties:
           additionalProperties: false
           properties:
             person_id:
-              _single_line_string: True
+              _single_line_string: true
               type: string
+
+            person:
+              _auto_populated: true
 
       spouse:
         type: string
-        _single_line_string: True
+        _single_line_string: true
 
       friends:
 
@@ -86,8 +89,11 @@ properties:
           additionalProperties: false
           properties:
             person_id:
-              _single_line_string: True
+              _single_line_string: true
               type: string
+
+            person:
+              _auto_populated: true
 
             friend_detail:
               type: string

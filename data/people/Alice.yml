@@ -4,7 +4,7 @@ person_id: alice
 name: 'Alice Aaliz'
 
 biography: |
-  Alice's biography goes here.
+  A short biography of Alice goes here.
 
   Alice is happy, as seen in \ref{figure:AliceIsHappy}:
   \begin{figure}

@@ -19,7 +19,8 @@ biography: |
       \celldata<H r rvert, H l>{Type & Favorite}
       \celldata<r rvert, l>{
         Savory & Mac \& Cheese \\
-        Sweet & Chocolate Ice Cream
+        Sweet & Chocolate Ice Cream\\
+        Soup & Chicken Soup
       }
     \end{cells}
     \caption{Bob's favorite foods}
