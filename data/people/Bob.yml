@@ -4,7 +4,7 @@ person_id: bob
 name: 'Bob Bibby'
 
 biography: |
-  Bob's biography goes here.
+  Lorem ipsum.  Bob's biography goes here.
 
   Bob likes to cite papers like this one~\cite{arXiv:1902.07714}.  Bob also
   \textbf{loves} to talk a lot about math (like \(\int f(x) dx = z\)) to
