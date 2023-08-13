@@ -3,7 +3,7 @@ import fs from 'fs';
 import loMerge from 'lodash/merge.js';
 
 
-import { StandardZooDb } from '@phfaist/zoodb/std/stdzoodb';
+import { ZooDb, ZooDbDataLoaderHandler } from '@phfaist/zoodb';
 
 import { use_relations_populator } from '@phfaist/zoodb/std/use_relations_populator';
 import { use_gitlastmodified_processor } from '@phfaist/zoodb/std/use_gitlastmodified_processor';
@@ -11,7 +11,8 @@ import { use_flm_environment } from '@phfaist/zoodb/std/use_flm_environment';
 import { use_flm_processor } from '@phfaist/zoodb/std/use_flm_processor';
 import { use_searchable_text_processor } from '@phfaist/zoodb/std/use_searchable_text_processor';
 
-import { StandardZooDbYamlDataLoader } from '@phfaist/zoodb/std/load_yamldb';
+import { makeStandardZooDb } from '@phfaist/zoodb/std/stdzoodb';
+import { makeStandardYamlDbDataLoader } from '@phfaist/zoodb/std/stdyamldbdataloader';
 
 
 
@@ -41,13 +42,45 @@ import { permalinks } from './permalinks.js';
 // -----------------------------------------------------------------------------
 
 
-export class MyZooDb extends StandardZooDb
+export class MyZooDb extends ZooDb
 {
     constructor(config)
     {
-        super(loMerge({
+        super(config);
+    }
 
-            fs,
+    //
+    // simple example of ZooDb validation -- check that spouses always report
+    // the other spouse as their spouse
+    //
+    async validate()
+    {
+        for (const [person_id, person] of Object.entries(this.objects.person)) {
+            if (person.relations != null && person.relations.spouse != null) {
+                // remember, person.relations.spouse is the ID of the spouse
+                // person, not the person object itself
+                const other_person = this.objects.person[person.relations.spouse];
+                if (other_person?.relations?.spouse !== person_id) {
+                    throw new Error(
+                        `Person ‘${person_id}’ lists ‘${person.relations.spouse}’ as their `
+                        + `spouse but not the other way around`
+                    );
+                }
+            }
+        }
+    }
+
+}
+
+
+
+export async function createMyZooDb(config = {})
+{
+    config = loMerge(
+        {
+            ZooDbClass: MyZooDb,
+
+            fs: fs,
             fs_data_dir: path.join(example_root_dir, 'data'),
 
             use_relations_populator,
@@ -97,74 +130,68 @@ export class MyZooDb extends StandardZooDb
 
             zoo_permalinks: permalinks,
 
-        }, config));
-    }
+        },
+        config
+    );
+
+    return await makeStandardZooDb(config);
+}
 
 
 
-    //
-    // simple example of ZooDb validation -- check that spouses always report
-    // the other spouse as their spouse
-    //
-    async validate()
-    {
-        for (const [person_id, person] of Object.entries(this.objects.person)) {
-            if (person.relations != null && person.relations.spouse != null) {
-                // remember, person.relations.spouse is the ID of the spouse
-                // person, not the person object itself
-                const other_person = this.objects.person[person.relations.spouse];
-                if (other_person?.relations?.spouse !== person_id) {
-                    throw new Error(
-                        `Person ‘${person_id}’ lists ‘${person.relations.spouse}’ as their `
-                        + `spouse but not the other way around`
-                    );
-                }
-            }
-        }
-    }
-};
 
 
 
 // -----------------------------------------------------------------------------
 
 
-export class MyZooDbYamlDataLoader extends StandardZooDbYamlDataLoader
-{
-    constructor()
-    {
-        const schema_root = `file://${example_root_dir}/`;
-        super({
-            //
-            // specify objects & where to find them
-            //
-            objects: {
-                person: {
-                    schema_name: 'person',
-                    data_src_path: 'people/',
-                },
-            },
-            
-            //
-            // specify where to find schemas
-            //
-            schemas: {
-                schema_root: schema_root,
-                schema_rel_path: 'schemas/',
-                schema_add_extension: '.yml',
-            },
 
-        });
-        this.schema_root = schema_root;
+export async function createMyYamlDbDataLoader(zoodb, { schema_root }={})
+{
+    schema_root ??= `file://${example_root_dir}/`;
+
+    let config = {
+        //
+        // specify objects & where to find them
+        //
+        objects: {
+            person: {
+                schema_name: 'person',
+                data_src_path: 'people/',
+            },
+        },
+        
+        //
+        // specify where to find schemas
+        //
+        schemas: {
+            schema_root: schema_root,
+            schema_rel_path: 'schemas/',
+            schema_add_extension: '.yml',
+        },
+
     }
-};
+
+    return await makeStandardYamlDbDataLoader(zoodb, config);
+}
+
+
+
 
 // -----------------------------------------------------------------------------
 
 export async function load_zoodb()
 {
-    const zoodb = new MyZooDb();
-    zoodb.install_zoo_loader(new MyZooDbYamlDataLoader({ }));
+    const zoodb = await createMyZooDb();
+    const loader = await createMyYamlDbDataLoader(zoodb);
+
+    const loader_handler = new ZooDbDataLoaderHandler(
+        loader,
+        {
+            throw_reload_errors: false, // for when in devel mode with eleventy
+        }
+    );
+    zoodb.install_zoo_loader_handler(loader_handler);
 
     await zoodb.load();
 
