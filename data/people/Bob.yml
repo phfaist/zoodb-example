@@ -27,5 +27,7 @@ biography: |
     \label{table:BobsFavoriteFoods}
   \end{table}
 
+  This line was added in order to test pull requests on this repo.
+
 relations:
   spouse: alice
