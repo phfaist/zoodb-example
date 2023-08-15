@@ -148,7 +148,7 @@ export async function createMyZooDb(config = {})
 
 export async function createMyYamlDbDataLoader(zoodb, { schema_root }={})
 {
-    schema_root ??= `file://${example_root_dir}/`;
+    schema_root ??= encodeURI(`file:///${example_root_dir}/`);
 
     let config = {
         //
