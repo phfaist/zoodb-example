@@ -74,8 +74,10 @@ export class MyZooDb extends ZooDb
 
 
 
-export async function createMyZooDb(config = {})
+export async function createMyZooDb(config = {}, { schema_root }={})
 {
+    schema_root ??= example_root_dir;
+
     config = loMerge(
         {
             ZooDbClass: MyZooDb,
@@ -130,6 +132,19 @@ export async function createMyZooDb(config = {})
 
             zoo_permalinks: permalinks,
 
+            //
+            // specify where to find schemas
+            //
+            schemas: {
+                schema_root: schema_root,
+                schema_rel_path: 'schemas/',
+                schema_add_extension: '.yml',
+            },
+            // The SchemaLoader will automatically load all files in the
+            // folder if the schema_root is a filesystem path.  Otherwise,
+            // specify a list of schema names to load here:
+            //schema_names: [ 'person', ]
+
         },
         config
     );
@@ -146,10 +161,8 @@ export async function createMyZooDb(config = {})
 
 
 
-export async function createMyYamlDbDataLoader(zoodb, { schema_root }={})
+export async function createMyYamlDbDataLoader(zoodb)
 {
-    schema_root ??= encodeURI(`file:///${example_root_dir}/`);
-
     let config = {
         //
         // specify objects & where to find them
@@ -159,15 +172,6 @@ export async function createMyYamlDbDataLoader(zoodb, { schema_root }={})
                 schema_name: 'person',
                 data_src_path: 'people/',
             },
-        },
-        
-        //
-        // specify where to find schemas
-        //
-        schemas: {
-            schema_root: schema_root,
-            schema_rel_path: 'schemas/',
-            schema_add_extension: '.yml',
         },
 
     }

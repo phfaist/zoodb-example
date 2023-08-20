@@ -1275,7 +1275,7 @@ __metadata:
 
 "@phfaist/zoodb@https://github.com/phfaist/zoodb#main":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=5425ae96d742d322878e7ad9f720df84bd0701e9"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=811ed21baeae3c9125da4f65f9b6d76784e0547d"
   dependencies:
     "@apidevtools/json-schema-ref-parser": ^10.1.0
     base32-encode: ^2.0.0
@@ -1297,7 +1297,7 @@ __metadata:
     stream-parser: ^0.3.1
     tippy.js: ^6.3.7
     url: ^0.11.0
-  checksum: 93909143fa8b0db7f70087a05d4436a22c7ee9312de8a6ca5d08107c98596bc0fc5b5c24f6a59aae13124757ebf6f51e5e144d9c4d2d0b2719fab02bd18f30d5
+  checksum: 3ae18f121fbabd4d95152cf7c7848e39789ae315e9dc90bb32192d7048062583c5beaa2e507addb57545dd2fe7b6cb16b6258b350504662c6216c877d9f5b9c0
   languageName: node
   linkType: hard
 
