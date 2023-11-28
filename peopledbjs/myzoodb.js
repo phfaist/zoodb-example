@@ -55,6 +55,8 @@ export class MyZooDb extends ZooDb
     //
     async validate()
     {
+        super.validate();
+
         for (const [person_id, person] of Object.entries(this.objects.person)) {
             if (person.relations != null && person.relations.spouse != null) {
                 // remember, person.relations.spouse is the ID of the spouse
@@ -195,7 +197,7 @@ export async function load_zoodb()
             throw_reload_errors: false, // for when in devel mode with eleventy
         }
     );
-    zoodb.install_zoo_loader_handler(loader_handler);
+    await zoodb.install_zoo_loader_handler(loader_handler);
 
     await zoodb.load();
 

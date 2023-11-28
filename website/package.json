@@ -10,7 +10,7 @@
     "@phfaist/zoodb": "*"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@kitschpatrol/eleventy-plugin-parcel": "^1.0.0",
     "@mischnic/parcel-resolver-root": "^0.4.2",
     "@parcel/config-default": "^2.9.3",

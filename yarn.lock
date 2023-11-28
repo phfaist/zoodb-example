@@ -12,9 +12,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-dev-server@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@11ty/eleventy-dev-server@npm:1.0.3"
+"@11ty/eleventy-dev-server@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@11ty/eleventy-dev-server@npm:1.0.4"
   dependencies:
     "@11ty/eleventy-utils": ^1.0.1
     chokidar: ^3.5.3
@@ -22,14 +22,14 @@ __metadata:
     dev-ip: ^1.0.1
     finalhandler: ^1.2.0
     mime: ^3.0.0
-    minimist: ^1.2.7
-    morphdom: ^2.6.1
+    minimist: ^1.2.8
+    morphdom: ^2.7.0
     please-upgrade-node: ^3.2.0
     ssri: ^8.0.1
-    ws: ^8.12.0
+    ws: ^8.13.0
   bin:
     eleventy-dev-server: cmd.js
-  checksum: c7070e0a41da7091a4b7e941365e22f600de1f5e81130d46bc732155f858c3cc7b2070f04b8d0806c16c43e3ddf2032c413485c8d6e914ae945778b2809c8ba1
+  checksum: 82c6dc42ebf78b8859af531f5f09012d7194ec6be627b185212c0f4363298e16c5d86866ac87a249ac2afb979f341e57cc85ef46778eb0bbefd8d59c86334602
   languageName: node
   linkType: hard
 
@@ -42,13 +42,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@11ty/eleventy@npm:2.0.0"
+"@11ty/eleventy@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@11ty/eleventy@npm:2.0.1"
   dependencies:
     "@11ty/dependency-tree": ^2.0.1
-    "@11ty/eleventy-dev-server": ^1.0.3
+    "@11ty/eleventy-dev-server": ^1.0.4
     "@11ty/eleventy-utils": ^1.0.1
+    "@11ty/lodash-custom": ^4.17.21
     "@iarna/toml": ^2.2.5
     "@sindresorhus/slugify": ^1.1.2
     bcp-47-normalize: ^1.1.1
@@ -56,23 +57,20 @@ __metadata:
     cross-spawn: ^7.0.3
     debug: ^4.3.4
     dependency-graph: ^0.11.0
-    ejs: ^3.1.8
+    ejs: ^3.1.9
     fast-glob: ^3.2.12
-    graceful-fs: ^4.2.10
+    graceful-fs: ^4.2.11
     gray-matter: ^4.0.3
     hamljs: ^0.6.2
     handlebars: ^4.7.7
     is-glob: ^4.0.3
     iso-639-1: ^2.1.15
     kleur: ^4.1.5
-    liquidjs: ^10.4.0
-    lodash.chunk: ^4.2.0
-    lodash.get: ^4.4.2
-    lodash.set: ^4.3.2
-    luxon: ^3.2.1
+    liquidjs: ^10.7.0
+    luxon: ^3.3.0
     markdown-it: ^13.0.1
     micromatch: ^4.0.5
-    minimist: ^1.2.7
+    minimist: ^1.2.8
     moo: ^0.5.2
     multimatch: ^5.0.0
     mustache: ^4.2.0
@@ -85,10 +83,17 @@ __metadata:
     pug: ^3.0.2
     recursive-copy: ^2.0.14
     semver: ^7.3.8
-    slugify: ^1.6.5
+    slugify: ^1.6.6
   bin:
     eleventy: cmd.js
-  checksum: 3a1fabbda86c2e3ca60e2e04104af51446e94b8f22f611cd094b33faa8e9082e1dcccf44e983e76397177484b41c9ab1d4ad04a44d0099a136a8c194b4325998
+  checksum: 987b2b02adc169705826587d515bed968f22dd572d8dcd7cafad500c224e672bd740d2fa0d5c41999fc0b6c97227def0eef8e7a7afdb6a51c9e0257e9f0c1417
+  languageName: node
+  linkType: hard
+
+"@11ty/lodash-custom@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "@11ty/lodash-custom@npm:4.17.21"
+  checksum: 531c399d65b36ed89dbdb0680250ca1231a156dba8f2885cd97c65b42c8d0a5882431b8e04f73a04fb73cb357f8086747e249d4252bebef244a02403c2c5c32d
   languageName: node
   linkType: hard
 
@@ -1275,7 +1280,7 @@ __metadata:
 
 "@phfaist/zoodb@https://github.com/phfaist/zoodb#main":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=0554db8a6070f0ea6ee7da4ce04607b9fc19dbb8"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=b8e617031cdddeb51610128f52183f8765a26351"
   dependencies:
     "@apidevtools/json-schema-ref-parser": ^10.1.0
     base32-encode: ^2.0.0
@@ -1297,7 +1302,7 @@ __metadata:
     stream-parser: ^0.3.1
     tippy.js: ^6.3.7
     url: ^0.11.0
-  checksum: 25a3037d244c9a00f9d37cab79d7396989f374db6f2ebbbf6a8625feaa9ad4fb8e6b303efd33656d6e6f9e5ae2484a05a13ccd6a30eb4fc95605b392ec02e102
+  checksum: a1132778f767262a102dfe65ce924604784a6b7c8e1a8b7b5b712d0c79cdc8f8dc728c22443f8fbc9b77845bb071311fe863ac3ef710362980d6f68cb6bf72b9
   languageName: node
   linkType: hard
 
@@ -2094,6 +2099,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "commander@npm:10.0.1"
+  checksum: 436901d64a818295803c1996cd856621a74f30b9f9e28a588e726b2b1670665bccd7c1a77007ebf328729f0139838a88a19265858a0fa7a8728c4656796db948
+  languageName: node
+  linkType: hard
+
 "commander@npm:^5.1.0":
   version: 5.1.0
   resolution: "commander@npm:5.1.0"
@@ -2373,14 +2385,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ejs@npm:^3.1.8":
-  version: 3.1.8
-  resolution: "ejs@npm:3.1.8"
+"ejs@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "ejs@npm:3.1.9"
   dependencies:
     jake: ^10.8.5
   bin:
     ejs: bin/cli.js
-  checksum: 1d40d198ad52e315ccf37e577bdec06e24eefdc4e3c27aafa47751a03a0c7f0ec4310254c9277a5f14763c3cd4bbacce27497332b2d87c74232b9b1defef8efc
+  checksum: af6f10eb815885ff8a8cfacc42c6b6cf87daf97a4884f87a30e0c3271fedd85d76a3a297d9c33a70e735b97ee632887f85e32854b9cdd3a2d97edf931519a35f
   languageName: node
   linkType: hard
 
@@ -2791,10 +2803,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.4, graceful-fs@npm:^4.2.10, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.4, graceful-fs@npm:^4.2.6":
   version: 4.2.10
   resolution: "graceful-fs@npm:4.2.10"
   checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.2.11":
+  version: 4.2.11
+  resolution: "graceful-fs@npm:4.2.11"
+  checksum: ac85f94da92d8eb6b7f5a8b20ce65e43d66761c55ce85ac96df6865308390da45a8d3f0296dd3a663de65d30ba497bd46c696cc1e248c72b13d6d567138a4fc7
   languageName: node
   linkType: hard
 
@@ -3483,13 +3502,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liquidjs@npm:^10.4.0":
-  version: 10.4.0
-  resolution: "liquidjs@npm:10.4.0"
+"liquidjs@npm:^10.7.0":
+  version: 10.9.4
+  resolution: "liquidjs@npm:10.9.4"
+  dependencies:
+    commander: ^10.0.0
   bin:
     liquid: bin/liquid.js
     liquidjs: bin/liquid.js
-  checksum: 71b93691b0ca92b2c6e287fa50a3ef67ec772b39a442d0129928a1350430ccf70f381ac1d4a10eb70840a1e443e2e601df559eb0859f939016b71b70f3858f4c
+  checksum: ee95c68117c3d92359d1e55f5d9da2112e5c6c99541a31704f808e6d274a59b971d41da9e556444b5fb005734195946be2b0e5f7cdd01afbccfb6f3bd215ff5b
   languageName: node
   linkType: hard
 
@@ -3549,13 +3570,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.chunk@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "lodash.chunk@npm:4.2.0"
-  checksum: 6286c6d06814fbeda502164015c42ef53a9194e6ebaac52ec2b41e83344aefe7bc3d94fdfec525adcd2c66cefdf05dc333b6a1128e4de739797342315c17cbc7
-  languageName: node
-  linkType: hard
-
 "lodash.clonedeep@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.clonedeep@npm:4.5.0"
@@ -3588,13 +3602,6 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: ad580b4bdbb7ca1f7abf7e1bce63a9a0b98e370cf40194b03380a46b4ed799c9573029599caebc1b14e3f24b111aef72b96674a56cfa105e0f5ac70546cdc005
-  languageName: node
-  linkType: hard
-
-"lodash.set@npm:^4.3.2":
-  version: 4.3.2
-  resolution: "lodash.set@npm:4.3.2"
-  checksum: a9122f49eef9f2d0fc9061a33d87f8e5b8c6b23d46e8b9e9ce1529d3588d79741bd1145a3abdfa3b13082703e65af27ff18d8a07bfc22b9be32f3fc36f763f70
   languageName: node
   linkType: hard
 
@@ -3642,10 +3649,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "luxon@npm:3.2.1"
-  checksum: 3fa3def2c5f5d3032b4c46220c4da8aeb467ac979888fc9d2557adcd22195f93516b4ad5909a75862bec8dc6ddc0953b0f38e6d2f4a8ab8450ddc531a83cf20d
+"luxon@npm:^3.3.0":
+  version: 3.4.4
+  resolution: "luxon@npm:3.4.4"
+  checksum: 36c1f99c4796ee4bfddf7dc94fa87815add43ebc44c8934c924946260a58512f0fd2743a629302885df7f35ccbd2d13f178c15df046d0e3b6eb71db178f1c60c
   languageName: node
   linkType: hard
 
@@ -3772,14 +3779,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.3":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.7":
+"minimist@npm:^1.2.5, minimist@npm:^1.2.6":
   version: 1.2.7
   resolution: "minimist@npm:1.2.7"
   checksum: 7346574a1038ca23c32e02252f603801f09384dd1d78b69a943a4e8c2c28730b80e96193882d3d3b22a063445f460e48316b29b8a25addca2d7e5e8f75478bec
@@ -3897,10 +3904,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"morphdom@npm:^2.6.1":
-  version: 2.7.0
-  resolution: "morphdom@npm:2.7.0"
-  checksum: de18e5b04b0a6222913e70d7a578eb0c15156a4501db3e8d9620ce9e5d998cd926418901b49726b6cc9344b05ea2df945ef77b0b49e3949f818c48d54f43d3c7
+"morphdom@npm:^2.7.0":
+  version: 2.7.1
+  resolution: "morphdom@npm:2.7.1"
+  checksum: 1c756488e4bd1486307fb75e056d7bbdb3d0c071f1320eaad3bfd2647022a61ef11b1b4129e783c6783c6cb75eb73a9d0acf41cab6a5f21f3cf8b3262bc97842
   languageName: node
   linkType: hard
 
@@ -5132,10 +5139,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.6.5":
-  version: 1.6.5
-  resolution: "slugify@npm:1.6.5"
-  checksum: a955a1b600201030f4c1daa9bb74a17d4402a0693fc40978bbd17e44e64fd72dad3bac4037422aa8aed55b5170edd57f3f4cd8f59ba331f5cf0f10f1a7795609
+"slugify@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "slugify@npm:1.6.6"
+  checksum: 04773c2d3b7aea8d2a61fa47cc7e5d29ce04e1a96cbaec409da57139df906acb3a449fac30b167d203212c806e73690abd4ff94fbad0a9a7b7ea109a2a638ae9
   languageName: node
   linkType: hard
 
@@ -5605,9 +5612,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.12.0":
-  version: 8.12.0
-  resolution: "ws@npm:8.12.0"
+"ws@npm:^8.13.0":
+  version: 8.14.2
+  resolution: "ws@npm:8.14.2"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -5616,7 +5623,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 818ff3f8749c172a95a114cceb8b89cedd27e43a82d65c7ad0f7882b1e96a2ee6709e3746a903c3fa88beec0c8bae9a9fcd75f20858b32a166dfb7519316a5d7
+  checksum: 3ca0dad26e8cc6515ff392b622a1467430814c463b3368b0258e33696b1d4bed7510bc7030f7b72838b9fdeb8dbd8839cbf808367d6aae2e1d668ce741d4308b
   languageName: node
   linkType: hard
 
@@ -5649,7 +5656,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "zoodb-example-peopledb-website@workspace:website"
   dependencies:
-    "@11ty/eleventy": ^2.0.0
+    "@11ty/eleventy": ^2.0.1
     "@kitschpatrol/eleventy-plugin-parcel": ^1.0.0
     "@mischnic/parcel-resolver-root": ^0.4.2
     "@parcel/config-default": ^2.9.3
