@@ -27,5 +27,7 @@ biography: |
     \label{table:BobsFavoriteFoods}
   \end{table}
 
+  %%Example invalid citation: \cite{arXiv:1806.1032}
+
 relations:
   spouse: alice
