@@ -4,6 +4,7 @@
   "packageManager": "yarn@3.3.0",
   "dependencies": {
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main",
+    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#head=main&workspace=@phfaist/zoodbtools_search",
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
   },
   "peerDependencies": {

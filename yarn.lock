@@ -1280,7 +1280,7 @@ __metadata:
 
 "@phfaist/zoodb@https://github.com/phfaist/zoodb#main":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=c3f513eeb5021b3650fbee4bac331787486c954e"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=dd6af6ba0c934923e4fb04a9ff9e0868c34cf2fe"
   dependencies:
     "@apidevtools/json-schema-ref-parser": ^10.1.0
     base32-encode: ^2.0.0
@@ -1295,14 +1295,25 @@ __metadata:
     js-yaml: ^4.1.0
     jsonschema: ^1.4.1
     lodash: ^4.17.21
-    lunr: ^2.3.9
     node-fetch: ^3.2.10
     parse-full-name: ^1.2.6
     sax: ^1.2.4
     stream-parser: ^0.3.1
-    tippy.js: ^6.3.7
     url: ^0.11.0
-  checksum: c81e5afdf5975d85a8088a6fbd8190048e5b02d65cec1993846f2e1fd2468159b87cb7b444ea9dcc9f0fd2cf8b8be64cfee555e6ff4ef07c27ecd94ba732c9a6
+  checksum: 5f03848ef84656abf5e0cafa438a0678be18647fc56d4fe6e8c5c030f6e8fbdd7f4fd73b9ec7b9aeef5edcecd1ad3d99accc359b2cf3af2a3652eab50ef5c7fb
+  languageName: node
+  linkType: hard
+
+"@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#head=main&workspace=@phfaist/zoodbtools_search":
+  version: 0.1.0
+  resolution: "@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=%40phfaist%2Fzoodbtools_search&commit=0f6a926713b3112cd0ffeb68835caab6074ade8b"
+  dependencies:
+    lodash: ^4.17.21
+    lunr: ^2.3.9
+    tippy.js: ^6.3.7
+  peerDependencies:
+    "@phfaist/zoodb": "*"
+  checksum: 18c1d310a001a4770d21e3f0ba8d77e78c644e15650257fc6d03f4b686d9467b61b207523b7153e9cd53fb57e75d42448916903a5b5a920ec8f811dcd9b234db
   languageName: node
   linkType: hard
 
@@ -5665,6 +5676,7 @@ __metadata:
     "@parcel/transformer-raw": ^2.9.3
     "@parcel/transformer-sass": 2.9.3
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main"
+    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#head=main&workspace=@phfaist/zoodbtools_search"
     parcel: ^2.9.3
     parcel-optimizer-nohtmlsuffix: "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix"
     parcel-reporter-static-files-copy: ^1.5.2
