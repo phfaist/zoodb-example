@@ -17,9 +17,15 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addDataExtension(
         "yml, yaml", (contents) => ({ IDidntConfigure11tyToLoadYamlFiles: true })
     );
-
     eleventyConfig.addWatchTarget( '../data/' );
 
+    // Load and build the zoo, and include it in the 11ty structure as global data.
+    // The callback will be executed again on subsequent builds in dev mode.
+    eleventyConfig.addGlobalData("zoodb", async () => {
+        const { load_zoodb } = await import('zoodb-example-peopledb-peobledbjs/myzoodb.js');
+        return await load_zoodb();
+    });
+    
     // building the zoo is pretty consequential, even incrementally, so don't
     // react right away but wait for a couple seconds first
     eleventyConfig.setWatchThrottleWaitTime(2000); // in milliseconds
