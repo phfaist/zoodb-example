@@ -1,7 +1,7 @@
 //
 // Eleventy site configuration
 //
-
+const path = require('path');
 
 const eleventyParcelPlugin = require("@kitschpatrol/eleventy-plugin-parcel");
 
@@ -10,6 +10,7 @@ const packageJson = require('./package.json');
 
 Error.stackTraceLimit = 999;
 
+const data_dir = path.join(__dirname, '../data/');
 
 module.exports = (eleventyConfig) => {
 
@@ -23,7 +24,7 @@ module.exports = (eleventyConfig) => {
     // The callback will be executed again on subsequent builds in dev mode.
     eleventyConfig.addGlobalData("zoodb", async () => {
         const { load_zoodb } = await import('zoodb-example-peopledb-peobledbjs/myzoodb.js');
-        return await load_zoodb();
+        return await load_zoodb({ data_dir });
     });
     
     // building the zoo is pretty consequential, even incrementally, so don't

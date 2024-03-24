@@ -76,16 +76,17 @@ export class MyZooDb extends ZooDb
 
 
 
-export async function createMyZooDb(config = {}, { schema_root }={})
+export async function createMyZooDb(config = {}, { data_dir, schema_root }={})
 {
     schema_root ??= example_root_dir;
+    data_dir ??= path.join(example_root_dir, 'data');
 
     config = loMerge(
         {
             ZooDbClass: MyZooDb,
 
             fs: fs,
-            fs_data_dir: path.join(example_root_dir, 'data'),
+            fs_data_dir: data_dir,
 
             use_relations_populator,
             use_gitlastmodified_processor,
@@ -186,9 +187,9 @@ export async function createMyYamlDbDataLoader(zoodb)
 
 // -----------------------------------------------------------------------------
 
-export async function load_zoodb()
+export async function load_zoodb(options)
 {
-    const zoodb = await createMyZooDb();
+    const zoodb = await createMyZooDb(null, options);
     const loader = await createMyYamlDbDataLoader(zoodb);
 
     const loader_handler = new ZooDbDataLoaderHandler(
