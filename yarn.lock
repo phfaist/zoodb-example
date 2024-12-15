@@ -5673,6 +5673,7 @@ __metadata:
     parcel-reporter-static-files-copy: ^1.5.2
     sharp: ^0.33.5
     sirv-cli: ^2.0.2
+    tippy.js: ^6.3.7
     zoodb-example-peopledb-peobledbjs: ">=0.0.1"
   peerDependencies:
     "@phfaist/zoodb": "*"
