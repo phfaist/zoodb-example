@@ -5,6 +5,7 @@
   "dependencies": {
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main",
     "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#head=main&workspace=@phfaist/zoodbtools_search",
+    "tippy.js": "^6.3.7",
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
   },
   "peerDependencies": {
@@ -13,17 +14,17 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@kitschpatrol/eleventy-plugin-parcel": "^1.0.0",
-    "@mischnic/parcel-resolver-root": "^0.4.2",
     "@parcel/config-default": "^2.13.2",
     "@parcel/core": "^2.13.2",
     "@parcel/transformer-image": "^2.13.2",
     "@parcel/transformer-raw": "^2.13.2",
     "@parcel/transformer-sass": "^2.13.2",
+    "@phfaist/parcel-resolver-root": "https://github.com/phfaist/parcel-resolver-root.git",
     "debug": "^4.3.4",
     "parcel": "^2.13.2",
     "parcel-optimizer-nohtmlsuffix": "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix",
     "parcel-reporter-static-files-copy": "^1.5.2",
-    "sharp": "^0.31.1",
+    "sharp": "^0.33.5",
     "sirv-cli": "^2.0.2"
   },
   "scripts": {
@@ -40,14 +41,20 @@
       "dat/*.json"
     ]
   },
-  "@mischnic/parcel-resolver-root": {
-    "~": "..",
-    "/": "./_site"
+  "@phfaist/parcel-resolver-root": {
+    "prefixPaths": {
+      "~": "/",
+      "/": "/website/_site"
+    }
   },
   "@parcel/resolver-default": {
     "packageExports": true
   },
   "staticFiles": {
     "staticPath": "./static_copy"
+  },
+  "@mischnic/parcel-resolver-root": {
+    "CAUTION-NOT-USED": "NOT-USED",
+    "/": "./_site"
   }
 }
