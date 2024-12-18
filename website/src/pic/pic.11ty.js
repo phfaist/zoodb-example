@@ -1,7 +1,8 @@
 
-const fsPromises = require('fs/promises');
+import fsPromises from 'fs/promises';
 
-const data = async () => {
+async function data()
+{
     return {
         pagination: {
             data: 'zoodb.zoo_flm_processor.resource_collector.collected_resources.graphics_path',
@@ -20,10 +21,11 @@ const data = async () => {
     };
 };
 
-const render = async (data) => {
+async function render(data)
+{
     const graphics_resource_data = data.graphics_resource_data;
     const full_source_path = graphics_resource_data.resolved_info.full_source_path;
     return await fsPromises.readFile(full_source_path);
 };
 
-module.exports = { data, render, }
+export default { data, render, };

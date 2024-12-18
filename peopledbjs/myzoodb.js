@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 import loMerge from 'lodash/merge.js';
 
@@ -15,13 +16,11 @@ import { makeStandardZooDb } from '@phfaist/zoodb/std/stdzoodb';
 import { makeStandardYamlDbDataLoader } from '@phfaist/zoodb/std/stdyamldbdataloader';
 
 
+// Use __dirname. *Requires Node >= 20.11 / 21.2* .
+// If you need to support older versions of Node, copy the three lines of code given
+// in https://stackoverflow.com/a/50052194/1694896
+const __dirname = import.meta.dirname;
 
-
-// support __filename & __dirname here
-import path from 'path';
-import url from 'url';
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 
 const example_root_dir = path.resolve(__dirname, '..');

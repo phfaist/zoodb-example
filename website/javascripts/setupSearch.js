@@ -1,12 +1,19 @@
+
+import { SearchIndex } from '@phfaist/zoodbtools_search/searchindex';
+import { SearchWidget } from '@phfaist/zoodbtools_search/searchwidget';
+import {
+    getLunrCustomOptionsAdvancedSetup
+} from '@phfaist/zoodbtools_search/lunradvancedsetup';
+import {
+    permalinks
+} from 'zoodb-example-peopledb-peobledbjs/permalinks.js';
+import {
+    lunrAdvancedOptions
+} from './searchLunrAdvancedOptions.js';
+
+
 async function setupSearch()
 {
-    const { SearchIndex } = await import('@phfaist/zoodbtools_search/searchindex');
-    const { SearchWidget } = await import('@phfaist/zoodbtools_search/searchwidget');
-    const { getLunrCustomOptionsAdvancedSetup } =
-        await import('@phfaist/zoodbtools_search/lunradvancedsetup');
-
-    const { permalinks } = await import('zoodb-example-peopledb-peobledbjs/permalinks.js');
-
     const dom_container = window.document.getElementById('SearchWidget');
 
     const search_index_url = dom_container.dataset.searchIndexUrl;
@@ -14,7 +21,6 @@ async function setupSearch()
     // install advanced Lunr customization options -- exact same setup must be done on
     // script that generated the index! (see searchGenerateIndex.js).  The indexLunrCustomOptions
     // will be provided to SearchIndex.load().
-    const { lunrAdvancedOptions } = await import('./searchLunrAdvancedOptions.js');
     const indexLunrCustomOptions = getLunrCustomOptionsAdvancedSetup(lunrAdvancedOptions);
 
     // download the search data

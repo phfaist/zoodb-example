@@ -1,4 +1,6 @@
 
+import { render_html_standalone } from '@phfaist/zoodb/zooflm';
+
 const data = {
     title: "People DB home",
     tags: [ 'allPages' ],
@@ -16,12 +18,10 @@ const data = {
     }
 };
 
-const render = async function (data)
+async function render(data)
 {
     const eleventy = this;
     const zoodb = data.zoodb;
-
-    const { render_html_standalone } = await import('@phfaist/zoodb/zooflm');
 
     let content = `
 <p>List of people:</p>`;
@@ -55,4 +55,4 @@ const render = async function (data)
 };
 
 
-module.exports = { data, render, };
+export default { data, render, };

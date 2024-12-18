@@ -1,19 +1,31 @@
 //
 // Eleventy site configuration
 //
-const path = require('path');
+import path from 'path';
 
-const eleventyParcelPlugin = require("@kitschpatrol/eleventy-plugin-parcel");
+import eleventyParcelPlugin from "@kitschpatrol/eleventy-plugin-parcel";
 
-const packageJson = require('./package.json');
+import packageJson from './package.json' with { type: 'json' };
+
+//
+// Import our custom package to handle the ZooDB
+//
+import { load_zoodb } from 'zoodb-example-peopledb-peobledbjs/myzoodb.js';
+
+
+// Use __dirname. *Requires Node >= 20.11 / 21.2* .
+// If you need to support older versions of Node, copy the three lines of code given
+// in https://stackoverflow.com/a/50052194/1694896
+const __dirname = import.meta.dirname;
+
 
 
 Error.stackTraceLimit = 999;
 
 const data_dir = path.join(__dirname, '../data/');
 
-module.exports = (eleventyConfig) => {
-
+export default async function (eleventyConfig)
+{
     // Watch .yml files!
     eleventyConfig.addDataExtension(
         "yml, yaml", (contents) => ({ IDidntConfigure11tyToLoadYamlFiles: true })
@@ -23,7 +35,6 @@ module.exports = (eleventyConfig) => {
     // Load and build the zoo, and include it in the 11ty structure as global data.
     // The callback will be executed again on subsequent builds in dev mode.
     eleventyConfig.addGlobalData("zoodb", async () => {
-        const { load_zoodb } = await import('zoodb-example-peopledb-peobledbjs/myzoodb.js');
         return await load_zoodb({ data_dir });
     });
     
@@ -48,25 +59,25 @@ module.exports = (eleventyConfig) => {
 
     // eleventyConfig.addPassthroughCopy({ "stylesheets": "stylesheets" })
 
-
-    const pathRewrite = (p, req) => {
-        console.log(`Request ${p}`);
-
-        let finalPath = p;
-        if (/^(\/[^.]+)$/.test(p)) {
-            // page requested -- rewrite path to include .html
-            finalPath = `${p}.html`;
-        }
-        // if (finalPath === '/' || finalPath.endsWith('.html')) {
-        //     touchDirsTree( [eleventy_out_dir] );
-        // }
-        return finalPath;
-    };
-
     //
     // Configure Parcel.  See https://github.com/kitschpatrol/eleventy-plugin-parcel
     //
     if (!packageJson.config.skipParcelInEleventyBuild) {
+
+        const pathRewrite = (p, req) => {
+            console.log(`Request ${p}`);
+
+            let finalPath = p;
+            if (/^(\/[^.]+)$/.test(p)) {
+                // page requested -- rewrite path to include .html
+                finalPath = `${p}.html`;
+            }
+            // if (finalPath === '/' || finalPath.endsWith('.html')) {
+            //     touchDirsTree( [eleventy_out_dir] );
+            // }
+            return finalPath;
+        };
+
         eleventyConfig.addPlugin(
             eleventyParcelPlugin,
             {
@@ -113,7 +124,5 @@ module.exports = (eleventyConfig) => {
         jsDataFileSuffix: '.11tydata',
     };
 };
-
-
 
 

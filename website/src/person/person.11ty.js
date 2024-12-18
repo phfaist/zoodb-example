@@ -1,7 +1,14 @@
-const data = async () => {
 
-    const zooflm = await import('@phfaist/zoodb/zooflm');
+import {
+    render_text_standalone,
+    make_render_shorthands,
+    make_and_render_document,
+} from '@phfaist/zoodb/zooflm';
+import { sqzhtml } from '@phfaist/zoodb/util/sqzhtml';
 
+
+async function data()
+{
     return {
         pagination: {
             data: 'zoodb.objects.person',
@@ -15,8 +22,10 @@ const data = async () => {
         eleventyComputed: {
             permalink: (data) =>
                 data.zoodb.zoo_object_permalink('person', data.person.person_id) + '.html',
-            title: (data) => zooflm.render_text_standalone(data.person.name),
-            person_name: (data) => zooflm.render_text_standalone(data.person.name),
+            title: (data) => render_text_standalone(data.person.name),
+            // it might be useful to 
+            person_name: (data) => render_text_standalone(data.person.name),
+
             date: (data) => {
                 // injection hack to get correct page date property!
                 // https://github.com/11ty/eleventy/issues/2199#issuecomment-1027362151
@@ -27,18 +36,15 @@ const data = async () => {
     };
 };
 
-const render = async (data) => {
-
+async function render(data)
+{
     const { person, zoodb } = data;
 
     const zoo_flm_environment = zoodb.zoo_flm_environment;
 
-    const zooflm = await import('@phfaist/zoodb/zooflm');
-    const { sqzhtml } = await import('@phfaist/zoodb/util/sqzhtml');
-
     const render_doc_fn = (render_context) => {
 
-        const { ne, rdr, rdrblock, ref } = zooflm.make_render_shorthands({ render_context });
+        const { ne, rdr, rdrblock, ref } = make_render_shorthands({ render_context });
 
         let s = '';
 
@@ -116,7 +122,7 @@ const render = async (data) => {
         return s;
     }
 
-    return zooflm.make_and_render_document({
+    return make_and_render_document({
         zoo_flm_environment,
         render_doc_fn,
         //doc_metadata: {},
@@ -127,4 +133,4 @@ const render = async (data) => {
 };
 
 
-module.exports = { data, render, };
+export default { data, render, };

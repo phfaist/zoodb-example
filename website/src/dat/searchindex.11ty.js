@@ -1,16 +1,20 @@
+import {
+    generate_search_index
+} from '../../javascripts/searchGenerateIndex.js';
+
+
+// `data` can be an object like this, but it can also be a function that returns
+// an object (which may also be async) -- see the eleventy docs
 const data = {
     layout: null,
     permalink: 'dat/searchindex.json',
 };
 
-const render = async (data) => {
-
-    const { generate_search_index } =
-          await import('../../javascripts/searchGenerateIndex.js');
-
+async function render(data)
+{
     const search_index_data = await generate_search_index({ zoodb: data.zoodb });
 
     return JSON.stringify(search_index_data);
 };
 
-module.exports = { data, render, };
+export default { data, render, };

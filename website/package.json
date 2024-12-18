@@ -2,9 +2,10 @@
   "name": "zoodb-example-peopledb-website",
   "private": true,
   "packageManager": "yarn@3.3.0",
+  "type": "module",
   "dependencies": {
-    "@phfaist/zoodb": "https://github.com/phfaist/zoodb#main",
-    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#head=main&workspace=@phfaist/zoodbtools_search",
+    "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git#commit=70af42fb679c0b187f2a0a98272bd7c5069d4cac",
+    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24",
     "tippy.js": "^6.3.7",
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
   },
@@ -12,22 +13,21 @@
     "@phfaist/zoodb": "*"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@kitschpatrol/eleventy-plugin-parcel": "^1.0.0",
+    "@11ty/eleventy": "^3.0.0",
+    "@kitschpatrol/eleventy-plugin-parcel": "^1.0.8",
     "@parcel/config-default": "^2.13.3",
     "@parcel/core": "^2.13.3",
-    "@parcel/node-resolver-core": "^3.4.0",
     "@parcel/plugin": "^2.13.3",
     "@parcel/transformer-image": "^2.13.3",
     "@parcel/transformer-raw": "^2.13.3",
     "@parcel/transformer-sass": "^2.13.3",
-    "@phfaist/parcel-resolver-root": "https://github.com/phfaist/parcel-resolver-root.git",
-    "debug": "^4.3.4",
+    "@phfaist/parcel-resolver-root": "https://github.com/phfaist/parcel-resolver-root.git#commit=2bbb68fa29fa3bfa5a35e59b8a27998c6ccdb10f",
+    "debug": "^4.4.0",
     "parcel": "^2.13.3",
-    "parcel-optimizer-nohtmlsuffix": "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix",
-    "parcel-reporter-static-files-copy": "^1.5.2",
+    "parcel-optimizer-nohtmlsuffix": "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix.git#commit=c32be4cd32c90dcf2fe64cf60d1186527897ef19",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "sharp": "^0.33.5",
-    "sirv-cli": "^2.0.2"
+    "sirv-cli": "^3.0.0"
   },
   "scripts": {
     "dev": "DEBUG=\"zoodb*,Eleventy:Benchmark,Eleventy:Logger,*Error*\" eleventy --serve",
