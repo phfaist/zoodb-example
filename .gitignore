@@ -10,7 +10,7 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 !.yarn/plugins
-.yarn/plugins/@yarnpkg
+.yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs
 
 
 _zoodb_citations_cache
