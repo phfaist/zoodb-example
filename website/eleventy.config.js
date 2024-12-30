@@ -5,7 +5,12 @@ import path from 'path';
 
 import eleventyParcelPlugin from "@kitschpatrol/eleventy-plugin-parcel";
 
-import packageJson from './package.json' with { type: 'json' };
+// 11ty watch mode chokes on import attributes (as of Dec 2024).
+// Use this workaround for now.
+//
+//import packageJson from './package.json' with { type: 'json' }; // 11ty watch error
+import fs from 'fs';
+const packageJson = JSON.parse(fs.readFileSync('./package.json'));
 
 //
 // Import our custom package to handle the ZooDB
