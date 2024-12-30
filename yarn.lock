@@ -153,16 +153,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apidevtools/json-schema-ref-parser@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "@apidevtools/json-schema-ref-parser@npm:10.1.0"
+"@apidevtools/json-schema-ref-parser@npm:^11.7.3":
+  version: 11.7.3
+  resolution: "@apidevtools/json-schema-ref-parser@npm:11.7.3"
   dependencies:
     "@jsdevtools/ono": ^7.1.3
-    "@types/json-schema": ^7.0.11
-    "@types/lodash.clonedeep": ^4.5.7
+    "@types/json-schema": ^7.0.15
     js-yaml: ^4.1.0
-    lodash.clonedeep: ^4.5.0
-  checksum: 6220dea1ffa2f1b34da54583cf447cc97c51e25b96c10705e858f42c8290bc775b5821182282493a8f99ec6e0dae8f01ccd865d547aa29c1a6be6a38713c4571
+  checksum: 3496edfb2c3d2f9a5a7a49795b4d560f1e4957015aef473775f4b5f2db55a4ddfb3778783401ddd24e7db2930a67a370fb8c68840d8bae0a2a581e0e57fc2f58
   languageName: node
   linkType: hard
 
@@ -1456,29 +1454,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=70af42fb679c0b187f2a0a98272bd7c5069d4cac":
+"@phfaist/zoodb@https://github.com/phfaist/zoodb.git":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=70af42fb679c0b187f2a0a98272bd7c5069d4cac"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=18bbfb5029bbe90ea1d296397daffe447c745259"
   dependencies:
-    "@apidevtools/json-schema-ref-parser": ^10.1.0
+    "@apidevtools/json-schema-ref-parser": ^11.7.3
     base32-encode: ^2.0.0
     browser-process-hrtime: ^1.0.0
     citeproc: ^2.4.62
-    debug: ^4.3.4
+    debug: ^4.4.0
     escape-html: ^1.0.3
     exif-parser: ^0.1.12
     feedparser: ^2.2.10
-    glob: ^8.0.3
+    glob: ^11.0.0
     hash.js: ^1.1.7
     js-yaml: ^4.1.0
     jsonschema: ^1.4.1
     lodash: ^4.17.21
-    node-fetch: ^3.2.10
+    node-fetch: ^3.3.2
     parse-full-name: ^1.2.6
-    sax: ^1.2.4
+    sax: ^1.4.1
     stream-parser: ^0.3.1
-    url: ^0.11.0
-  checksum: 903b6afe6f905c1e814133e3442ffcd01858369b684b31e50ca54cd22d88c53637ddf5eadb0b2a513c6eb03ac63c4a92bf92bbae01b812f4c93172e7da4a3780
+    url: ^0.11.4
+  checksum: 2961c98211dfc5a6b03f93556eb47a54b8bdeb54dcc1643b482b2ac8d7ce0c904aed19e9281934c83d194d556c3c067e05756d94b3d78ba275226894779073c8
   languageName: node
   linkType: hard
 
@@ -1686,26 +1684,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.11":
+"@types/json-schema@npm:^7.0.15":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 97ed0cb44d4070aecea772b7b2e2ed971e10c81ec87dd4ecc160322ffa55ff330dace1793489540e3e318d90942064bb697cc0f8989391797792d919737b3b98
-  languageName: node
-  linkType: hard
-
-"@types/lodash.clonedeep@npm:^4.5.7":
-  version: 4.5.9
-  resolution: "@types/lodash.clonedeep@npm:4.5.9"
-  dependencies:
-    "@types/lodash": "*"
-  checksum: ef85512b7dce7a4f981a818ae44d11982907e1f26b5b26bedf0957c35e8591eb8e1d24fa31ca851d4b40e0a1ee88563853d762412691fe5f357e8335cead2325
-  languageName: node
-  linkType: hard
-
-"@types/lodash@npm:*":
-  version: 4.17.13
-  resolution: "@types/lodash@npm:4.17.13"
-  checksum: d0bf8fbd950be71946e0076b30fd40d492293baea75f05931b6b5b906fd62583708c6229abdb95b30205ad24ce1ed2f48bc9d419364f682320edd03405cc0c7e
   languageName: node
   linkType: hard
 
@@ -2773,13 +2755,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs.realpath@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "fs.realpath@npm:1.0.0"
-  checksum: 99ddea01a7e75aa276c250a04eedeffe5662bce66c65c07164ad6264f9de18fb21be9433ead460e54cff20e31721c811f4fb5d70591799df5f85dce6d6746fd0
-  languageName: node
-  linkType: hard
-
 "fsevents@npm:~2.3.2":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
@@ -2863,16 +2838,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^8.0.3":
-  version: 8.1.0
-  resolution: "glob@npm:8.1.0"
+"glob@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "glob@npm:11.0.0"
   dependencies:
-    fs.realpath: ^1.0.0
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^5.0.1
-    once: ^1.3.0
-  checksum: 92fbea3221a7d12075f26f0227abac435de868dd0736a17170663783296d0dd8d3d532a5672b4488a439bf5d7fb85cdd07c11185d6cd39184f0385cbdfb86a47
+    foreground-child: ^3.1.0
+    jackspeak: ^4.0.1
+    minimatch: ^10.0.0
+    minipass: ^7.1.2
+    package-json-from-dist: ^1.0.0
+    path-scurry: ^2.0.0
+  bin:
+    glob: dist/esm/bin.mjs
+  checksum: 8a2dd914d5776987be5244624d9491bbcaf19f2387e06783737003ff696ebfd2264190c47014f8709c1c02d8bc892f17660cf986c587b107e194c0a3151ab333
   languageName: node
   linkType: hard
 
@@ -3142,17 +3120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inflight@npm:^1.0.4":
-  version: 1.0.6
-  resolution: "inflight@npm:1.0.6"
-  dependencies:
-    once: ^1.3.0
-    wrappy: 1
-  checksum: f4f76aa072ce19fae87ce1ef7d221e709afb59d445e05d47fba710e85470923a75de35bfae47da6de1b18afc3ce83d70facf44cfb0aff89f0a3f45c0a0244dfd
-  languageName: node
-  linkType: hard
-
-"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.3, inherits@npm:~2.0.3":
+"inherits@npm:2.0.4, inherits@npm:^2.0.3, inherits@npm:~2.0.3":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -3305,6 +3273,15 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: be31027fc72e7cc726206b9f560395604b82e0fddb46c4cbf9f97d049bcef607491a5afc0699612eaa4213ca5be8fd3e1e7cd187b3040988b65c9489838a7c00
+  languageName: node
+  linkType: hard
+
+"jackspeak@npm:^4.0.1":
+  version: 4.0.2
+  resolution: "jackspeak@npm:4.0.2"
+  dependencies:
+    "@isaacs/cliui": ^8.0.2
+  checksum: 210030029edfa1658328799ad88c3d0fc057c4cb8a069fc4137cc8d2cc4b65c9721c6e749e890f9ca77a954bb54f200f715b8896e50d330e5f3e902e72b40974
   languageName: node
   linkType: hard
 
@@ -3583,13 +3560,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.clonedeep@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.clonedeep@npm:4.5.0"
-  checksum: 92c46f094b064e876a23c97f57f81fbffd5d760bf2d8a1c61d85db6d1e488c66b0384c943abee4f6af7debf5ad4e4282e74ff83177c9e63d8ff081a4837c3489
-  languageName: node
-  linkType: hard
-
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -3636,6 +3606,13 @@ __metadata:
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 6476138d2125387a6d20f100608c2583d415a4f64a0fecf30c9e2dda976614f09cad4baa0842447bd37dd459a7bd27f57d9d8f8ce558805abd487c583f3d774a
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^11.0.0":
+  version: 11.0.2
+  resolution: "lru-cache@npm:11.0.2"
+  checksum: f9c27c58919a30f42834de9444de9f75bcbbb802c459239f96dd449ad880d8f9a42f51556d13659864dc94ab2dbded9c4a4f42a3e25a45b6da01bb86111224df
   languageName: node
   linkType: hard
 
@@ -3756,21 +3733,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "minimatch@npm:10.0.1"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: f5b63c2f30606091a057c5f679b067f84a2cd0ffbd2dbc9143bda850afd353c7be81949ff11ae0c86988f07390eeca64efd7143ee05a0dab37f6c6b38a2ebb6c
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.0":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
     brace-expansion: ^1.1.7
   checksum: c154e566406683e7bcb746e000b84d74465b3a832c45d59912b9b55cd50dee66e5c4b1e5566dba26154040e51672f9aa450a9aef0c97cfc7336b78b7afb9540a
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^5.0.1":
-  version: 5.1.6
-  resolution: "minimatch@npm:5.1.6"
-  dependencies:
-    brace-expansion: ^2.0.1
-  checksum: 7564208ef81d7065a370f788d337cd80a689e981042cb9a1d0e6580b6c6a8c9279eba80010516e258835a988363f99f54a6f711a315089b8b42694f5da9d0d77
   languageName: node
   linkType: hard
 
@@ -3993,7 +3970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^3.2.10":
+"node-fetch@npm:^3.3.2":
   version: 3.3.2
   resolution: "node-fetch@npm:3.3.2"
   dependencies:
@@ -4145,15 +4122,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"once@npm:^1.3.0":
-  version: 1.4.0
-  resolution: "once@npm:1.4.0"
-  dependencies:
-    wrappy: 1
-  checksum: cd0a88501333edd640d95f0d2700fbde6bff20b3d4d9bdc521bdd31af0656b5706570d6c6afe532045a20bb8dc0849f8332d6f2a416e0ba6d3d3b98806c7db68
-  languageName: node
-  linkType: hard
-
 "ordered-binary@npm:^1.4.1":
   version: 1.5.3
   resolution: "ordered-binary@npm:1.5.3"
@@ -4277,6 +4245,16 @@ __metadata:
     lru-cache: ^10.2.0
     minipass: ^5.0.0 || ^6.0.2 || ^7.0.0
   checksum: 890d5abcd593a7912dcce7cf7c6bf7a0b5648e3dee6caf0712c126ca0a65c7f3d7b9d769072a4d1baf370f61ce493ab5b038d59988688e0c5f3f646ee3c69023
+  languageName: node
+  linkType: hard
+
+"path-scurry@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "path-scurry@npm:2.0.0"
+  dependencies:
+    lru-cache: ^11.0.0
+    minipass: ^7.1.2
+  checksum: 9953ce3857f7e0796b187a7066eede63864b7e1dfc14bf0484249801a5ab9afb90d9a58fc533ebb1b552d23767df8aa6a2c6c62caf3f8a65f6ce336a97bbb484
   languageName: node
   linkType: hard
 
@@ -4641,7 +4619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:^1.2.4":
+"sax@npm:^1.2.4, sax@npm:^1.4.1":
   version: 1.4.1
   resolution: "sax@npm:1.4.1"
   checksum: 3ad64df16b743f0f2eb7c38ced9692a6d924f1cd07bbe45c39576c2cf50de8290d9d04e7b2228f924c7d05fecc4ec5cf651423278e0c7b63d260c387ef3af84a
@@ -5211,7 +5189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"url@npm:^0.11.0":
+"url@npm:^0.11.4":
   version: 0.11.4
   resolution: "url@npm:0.11.4"
   dependencies:
@@ -5300,13 +5278,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrappy@npm:1":
-  version: 1.0.2
-  resolution: "wrappy@npm:1.0.2"
-  checksum: 159da4805f7e84a3d003d8841557196034155008f817172d4e986bd591f74aa82aa7db55929a54222309e01079a65a92a9e6414da5a6aa4b01ee44a511ac3ee5
-  languageName: node
-  linkType: hard
-
 "ws@npm:^8.18.0":
   version: 8.18.0
   resolution: "ws@npm:8.18.0"
@@ -5360,7 +5331,7 @@ __metadata:
     "@parcel/transformer-raw": ^2.13.3
     "@parcel/transformer-sass": ^2.13.3
     "@phfaist/parcel-resolver-root": "https://github.com/phfaist/parcel-resolver-root.git#commit=2bbb68fa29fa3bfa5a35e59b8a27998c6ccdb10f"
-    "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git#commit=70af42fb679c0b187f2a0a98272bd7c5069d4cac"
+    "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git"
     "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24"
     debug: ^4.4.0
     parcel: ^2.13.3

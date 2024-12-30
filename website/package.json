@@ -4,7 +4,7 @@
   "packageManager": "yarn@3.3.0",
   "type": "module",
   "dependencies": {
-    "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git#commit=70af42fb679c0b187f2a0a98272bd7c5069d4cac",
+    "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git",
     "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24",
     "tippy.js": "^6.3.7",
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
