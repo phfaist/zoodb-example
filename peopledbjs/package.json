@@ -1,6 +1,6 @@
 {
   "name": "zoodb-example-peopledb-peobledbjs",
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@4.6.0",
   "type": "module",
   "version": "0.1.0",
   "main": "peopledb.js",

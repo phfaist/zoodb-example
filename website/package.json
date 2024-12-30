@@ -1,7 +1,7 @@
 {
   "name": "zoodb-example-peopledb-website",
   "private": true,
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@4.6.0",
   "type": "module",
   "dependencies": {
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git",
