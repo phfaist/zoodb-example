@@ -1,6 +1,6 @@
 {
   "name": "zoodb-example-peopledb",
-  "packageManager": "yarn@3.8.7",
+  "packageManager": "yarn@4.6.0",
   "private": true,
   "workspaces": [
     "peopledbjs",
