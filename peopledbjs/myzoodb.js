@@ -126,6 +126,18 @@ export async function createMyZooDb(config = {}, { data_dir, schema_root }={})
                     }
                 },
 
+                environment_options: {
+                    // Options will be passed on to ZooFLMEnvironment's constructor.
+                    // For instance, some might prefer to adjust the parsing state
+                    // to enable dollar-sign math mode ($a+b=c$ instead of \(a+b=c\)).
+                    // See ZooFLMEnvironment()'s documentation and the documentation for
+                    // FLM's `flm.flmenvironment.standard_parsing_state()`.
+
+                    // parsing: {
+                    //     dollar_inline_math_mode: true
+                    // }
+                }
+
             },
 
             searchable_text_options: {
