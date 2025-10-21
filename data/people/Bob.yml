@@ -26,6 +26,8 @@ biography: |
     \caption{Bob's favorite foods}
     \label{table:BobsFavoriteFoods}
   \end{table}
+
+  Note how "quotes" are 'automatically' converted.
   
   %% Use two percent signs for a single-line FLM comment
   %%Example invalid citation: \cite{arXiv:1806.1032}

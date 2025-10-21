@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git",
-    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24",
+    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search",
     "tippy.js": "^6.3.7",
     "zoodb-example-peopledb-peobledbjs": ">=0.0.1"
   },

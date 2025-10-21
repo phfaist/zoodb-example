@@ -32,3 +32,11 @@ in the folder `website/` folder.
 
 See also [the documentation for the ZooDB
 package](https://zoodb.readthedocs.org/).
+
+
+The command to update zoodb-related packages, which we fetch directly from
+github, is:
+```bash
+yarn up -i '@phfaist/zoodb@https://github.com/phfaist/zoodb.git' \
+  '@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search'
+```

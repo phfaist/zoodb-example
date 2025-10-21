@@ -1456,7 +1456,7 @@ __metadata:
 
 "@phfaist/zoodb@https://github.com/phfaist/zoodb.git":
   version: 0.1.1
-  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=9c12d7d03cc51aaad98bb2b1065a7b3939a7d258"
+  resolution: "@phfaist/zoodb@https://github.com/phfaist/zoodb.git#commit=833f0195db826f4c635a3b452b7775d6825e3121"
   dependencies:
     "@apidevtools/json-schema-ref-parser": "npm:^11.7.3"
     base32-encode: "npm:^2.0.0"
@@ -1476,13 +1476,13 @@ __metadata:
     sax: "npm:^1.4.1"
     stream-parser: "npm:^0.3.1"
     url: "npm:^0.11.4"
-  checksum: 10c0/ec0c425953373e9d1a5cea4df63b557972522c8dfe9670915d4e41ffe655ebb05b09ef442f6a15c1328d496c559ba171684bb71355e79c6dc433e35a0e92aef8
+  checksum: 10c0/2336ad7db69eb733eb221d56310e4e889f4be75c5a4cb3cc7114baba3091d7787bc6ab15346e12093d6ca1f855478d3c7839ee4b39970db6fca5ac0d32f4af7b
   languageName: node
   linkType: hard
 
-"@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24":
+"@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search":
   version: 0.1.0
-  resolution: "@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=%40phfaist%2Fzoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24"
+  resolution: "@phfaist/zoodbtools_search@https://github.com/phfaist/zoodbtools.git#workspace=%40phfaist%2Fzoodbtools_search&commit=93022a9ce833dff5bcd02be45c5e64ee3421294c"
   dependencies:
     debug: "npm:^4.3.4"
     lodash: "npm:^4.17.21"
@@ -5332,7 +5332,7 @@ __metadata:
     "@parcel/transformer-sass": "npm:^2.13.3"
     "@phfaist/parcel-resolver-root": "https://github.com/phfaist/parcel-resolver-root.git#commit=2bbb68fa29fa3bfa5a35e59b8a27998c6ccdb10f"
     "@phfaist/zoodb": "https://github.com/phfaist/zoodb.git"
-    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search&commit=6862f97e39f4db835adbbae889d43efc8da50e24"
+    "@phfaist/zoodbtools_search": "https://github.com/phfaist/zoodbtools.git#workspace=@phfaist/zoodbtools_search"
     debug: "npm:^4.4.0"
     parcel: "npm:^2.13.3"
     parcel-optimizer-nohtmlsuffix: "https://github.com/phfaist/parcel-optimizer-nohtmlsuffix.git#commit=c32be4cd32c90dcf2fe64cf60d1186527897ef19"
