@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "debug": "^4.4.0",
-    "lodash": "^4.17.21"
+    "debug": "^4.4.3",
+    "lodash": "^4.18.1"
   },
   "peerDependencies": {
     "@phfaist/zoodb": "*"
